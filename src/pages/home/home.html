@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="danger">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -7,12 +7,68 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content>
+  <!-- <ion-item class="status">
+    <p text-center class="textp">{{locstatus}}</p>
+  </ion-item> -->
+  <div #map id="map"></div>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <!--Box Button-->
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <div class="bottom-wrapper">
+
+    <div class="inner-item">
+        <ion-item style="background: none; color: white;" [hidden]="hideMe">
+            <ion-label>Absen Luar Kantor</ion-label>
+            <ion-toggle [(ngModel)]="isToggled" (ionChange)="AbsenLuar()"></ion-toggle>
+        </ion-item>
+    </div> 
+
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button ion-button class="absen-btn" (click)="openCamera()" [disabled]="!attBtn" color="secondary">
+            Absen Masuk
+          </button>
+        </ion-col>
+        <ion-col>
+          <p class="textp">{{locstatus}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+  <!--End box button-->
+
+
+
+<!--Form Absen Luar Kantor-->
+  <div class="form-box" [hidden]="hideThis" (ionChange)="AbsenLuar()">
+
+  <div class="spacer" style="height: 1px;"></div>
+
+  <ion-list inset>
+
+      <ion-item style="border-radius: 10px;">
+        <ion-label style="margin-left: 10px;">
+        <ion-icon name="information-circle"></ion-icon>
+        </ion-label>
+        <ion-input type="text" placeholder="Keterangan"></ion-input>
+      </ion-item>
+
+      <div class="spacer" style="height: 5px;"></div>
+    
+      <ion-item style="border-radius: 10px;">
+          <ion-label style="margin-left: 10px;">
+            <ion-icon name="document"></ion-icon>
+          </ion-label>
+        <ion-input type="file" placeholder="Berkas Pendukung"></ion-input>
+      </ion-item>
+    
+    </ion-list>
+
+  </div>
+  
 </ion-content>

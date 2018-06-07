@@ -1,16 +1,26 @@
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
+  <ion-content class="menu-content">
+
+    <div class="header-menu" padding>
+      <img class="user-avatar" src="https://i.imgur.com/JiMdcEF.jpg"/>
+
+      <p style="text-align: center; color: #ffffff;">NYOMAN TRIYOGA DIBRATA</p>
+      <p style="text-align: center; color: #ffffff; margin-top: -5px;">9794006</p>
+    
+    </div>
+
+    <div class="wrapper-menu">
+        <ion-list>
+            <button class="list-menu" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+             <ion-icon name="{{p.icon}}" color="light"></ion-icon> {{p.title}}
+            </button>
+            <button class="list-menu" menuClose ion-item (click)="logout()">
+                <ion-icon name="ios-log-out-outline" color="light"></ion-icon> Logout
+            </button>
+        </ion-list>
+    </div>
+
   </ion-content>
 
 </ion-menu>

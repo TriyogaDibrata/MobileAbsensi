@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar color="danger">
+        <ion-title>
+            Registrasi Dan Rekam Wajah
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-simple-wizard [(step)]="step" [showSteps]="true" (finish)="onFinish()" [finishIcon]="'done-all'" [(stepCondition)]="stepCondition">
+        <ion-wizard-step *ngFor="let step of stepsArray">
+
+            <ion-card class="card-wizard">
+                <ion-card-content>
+                    <ion-card-title class="card-title">
+                        <p>{{step.title}}</p>
+                      </ion-card-title>
+                        <ion-item>
+                            <ion-label>Next Condition</ion-label>
+                            <ion-toggle (ionChange)="toggleCondition($event)" [(ngModel)]="stepCondition"></ion-toggle>
+                        </ion-item>
+                </ion-card-content>
+            </ion-card>
+        </ion-wizard-step>
+
+    </ion-simple-wizard>
+
+
+</ion-content>

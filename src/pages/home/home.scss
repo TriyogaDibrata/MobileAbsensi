@@ -1,3 +1,50 @@
 page-home {
 
+    .textp{
+        color: #ffffff;
+    }
+
+    .status {
+        height: 6%; 
+        text-align: center; 
+        background: linear-gradient(to right, #232526, #414345);
+    }
+
+    #map {
+        height: 100%;
+    }
+
+    .bottom-wrapper {
+        height: 120px; 
+        background: linear-gradient(to right, #232526, #414345); 
+        margin-top: -130px;
+        margin-left: 12px; 
+        margin-right: 12px; 
+        border-radius: 10px;
+        position: relative;
+        opacity: 0.9;
+    }
+
+    .form-box{
+        height: 135px; 
+        background: linear-gradient(to right, #232526, #414345); 
+        margin-top: -260px;
+        margin-left: 12px; 
+        margin-right: 12px; 
+        border-radius: 10px;
+        position: relative;
+        opacity: 0.9;
+    }
+
+    .inner-item {
+        height: 30px; 
+        margin-left: 20px; 
+        margin-right: 10px;
+    }
+
+    .absen-btn {
+        margin-top: 20px; 
+        margin-left: 25px; 
+        height: 40px;
+    }
 }

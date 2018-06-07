@@ -1,0 +1,35 @@
+<ion-content class="landing-content">
+  <img class="img-logo" src="https://i.imgur.com/gqAFRqS.png"/>
+
+  <div class="login-box" padding>
+
+    <p text-center>Silahkan Login Dengan NIP dan Password Anda</p>
+  
+    <div>
+
+          <ion-item>
+            <ion-label>
+              <ion-icon name="contact"></ion-icon>
+            </ion-label>
+            <ion-input type="text" placeholder="NIP"></ion-input>
+          </ion-item>
+
+          <div class="spacer"></div>
+        
+          <ion-item>
+              <ion-label>
+                <ion-icon name="key"></ion-icon>
+              </ion-label>
+            <ion-input type="password" placeholder="Password"></ion-input>
+          </ion-item>
+        
+    </div>
+
+    <button ion-button round (click)="ToHome()" class="login-btn">
+      Login
+    </button>
+
+        <p text-center (click)="ToRegister()">Daftar</p>   
+  </div>
+</ion-content>
+

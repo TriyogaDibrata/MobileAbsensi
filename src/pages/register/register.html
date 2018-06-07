@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>Registrasi</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <!-- <button ion-button icon-left clear color="dark" (click)="ToLogin()">
+        <ion-icon name="arrow-back"></ion-icon>
+        Kembali
+    </button> -->
+
+    <ion-row class="account-form">
+        <ion-col>
+          <ion-list>
+     
+            <ion-item>
+              <ion-label><ion-icon name="card"></ion-icon></ion-label>
+              <ion-input [(ngModel)]="nip" placeholder="NIP" type="text"></ion-input>
+            </ion-item>
+     
+            <ion-item>
+              <ion-label><ion-icon name="person"></ion-icon></ion-label>
+              <ion-input [(ngModel)]="userData.nama" placeholder="Nama" type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label><ion-icon name="home"></ion-icon></ion-label>
+                <ion-select placeholder="Pilih OPD">
+                  <ion-option>Diskominfo</ion-option>
+                </ion-select>
+            </ion-item>
+     
+            <ion-item>
+              <ion-label><ion-icon name="mail"></ion-icon></ion-label>
+              <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>
+            </ion-item>
+     
+            <ion-item>
+              <ion-label><ion-icon name="lock"></ion-icon></ion-label>
+              <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>
+            </ion-item>
+
+            <ion-item>
+            <p style="display: block; text-align: center;"> Daftarkan Wajah Anda</p>
+            <button ion-button color="dark" (click)="takePhoto()" block style="width: 100px; height: 100px; display: block; margin-left: auto; margin-right: auto;">
+                <img src="assets/imgs/face_scan.png">
+           </button>
+          </ion-item>
+
+            <img *ngIf="base64image !==undefined" [src]="base64image" style="display: block;
+            margin-right: auto; margin-left: auto;"/>
+     
+          </ion-list>
+     
+          <button ion-button block round color="secondary" (click)="register()">Register</button>
+     
+        </ion-col>
+      </ion-row>
+
+</ion-content>
